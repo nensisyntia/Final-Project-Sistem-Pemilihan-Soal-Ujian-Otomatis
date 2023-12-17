@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Soal</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="content">
+        <h1 style="margin-top: -1px; margin-bottom: 6%; text-align: center;"  class="judul" href="/index">Daftar Soal</h1>
+        <div id="table-container">
+            <table>
+                <thead>
+                  <th style="padding: 15px;
+                  text-align: center;">ID</th>
+                  <th>Pertanyaan</th>
+                  <th>Pilihan Jawaban</th>
+                  <th>Tingkat Kesulitan</th>
+                  <th>Topik</th>
+                </thead>
+                <tbody >
+                <% let counter = 1; %>
+                  <% data.forEach(item => { %>
+                    
+                    <tr>
+                      <td style="padding: 15px;
+                      text-align: center;"><%= counter++; %></td>
+                      <td style="padding: 15px;
+                      text-align: left;"><%= item.pertanyaan %></td>
+                      <td>
+                        <ol type="a">
+                          <% item.teks_pilihan.forEach(pilihan => { %>
+                            <li><%= pilihan %></li>
+                          <% }); %>
+                        </ol>
+                      </td>
+                      <td style="padding: 15px;
+                      text-align: center;"><%= item.tingkat_kesulitan %></td>
+                      <td style="padding: 15px;
+                      text-align: center;"><%= item.topik %></td>
+                    </tr>
+                  <% }); %>
+                </tbody>
+              </table>
+        </div>
+    </div>
+
+
+    <div id="create-upload-btn">
+        <a href="/upload" type="button">Upload Data Soal</a>
+    </div>
+
+
+    <script>
+        function redirectPage(itemId) {
+            window.location.href = 'lihatUjian/' + itemId;
+        }
+    </script>
+
+</body>
+</html>

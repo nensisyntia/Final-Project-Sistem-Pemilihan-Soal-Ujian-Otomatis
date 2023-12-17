@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Ujian</title>
+    <!-- <link rel="stylesheet" href="../public/index.css"> -->
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="content">
+        <h1 style="margin-top: -1px; margin-bottom: 6%; text-align: center;" class="judul">Soal Ujian</h1>
+        <h3><%= data.jenis; %> <%= data.mata_kuliah; %></h3>
+        <div id="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="padding: 15px;
+                        text-align: center;">NO</th>
+                        <th>Pertanyaan</th>
+                        <th>Jawaban</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% let counter = 1; %>
+                    <% soal.forEach((question, index) => { %>
+                        <tr>
+                            <td style="padding: 15px;
+                            text-align: center;"><%= counter++; %></td>
+                            <td style="padding: 15px;
+                            text-align: left;"><%= question.pertanyaan %></td>
+                            <td>
+                                <ol type="a">
+                                    <% question.teks_pilihan.forEach((answer, answerIndex) => { %>
+                                        <li><%= answer %></li>
+                                    <% }); %>
+                                </ol>
+                            </td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="create-exam-btn">
+        <a href="/upload" type="button">Tambah Soal Baru</a>
+    </div>
+    <div id="create-exam-btn">
+        <a href="/upload" type="button">Tambah Soal Baru</a>
+    </div>
+    <!-- <button id="create-exam-btn">Buat Ujian Baru</button> -->
+</body>
+</html>

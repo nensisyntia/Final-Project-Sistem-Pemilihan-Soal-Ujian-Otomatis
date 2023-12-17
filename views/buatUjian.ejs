@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tambah Ujian</title>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        margin: 20px;
+        background-color: #f4f4f4;
+      }
+  
+      h1 {
+        color: #333;
+        text-align: center;
+      }
+  
+      form {
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+  
+      label {
+        display: block;
+        margin-bottom: 10px;
+        color: #555;
+      }
+  
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+      }
+  
+      button {
+        background-color: #006e9a;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+  
+      button:hover {
+        background-color: #006187;
+      }
+    </style>
+</head>
+<body>
+
+    <h1>Form Tambah Ujian</h1>
+
+    <form action="http://localhost:3000/buatUjian" method="POST">
+        <label for="nama_ujian">Nama Ujian:</label>
+        <input type="text" id="nama_ujian" name="nama_ujian" required><br>
+
+        <label for="jumlah_soal">Jumlah Soal:</label>
+        <input type="number" id="jumlah_soal" name="jumlah_soal" required><br>
+
+        <label for="topic">Topic:</label>
+        <input type="text" id="topic" name="topic" required><br>
+
+        <label for="durasi">Durasi:</label>
+        <input type="number" id="durasi" name="durasi" required>
+
+        <label for="tanggal">Tanggal:</label>
+        <input type="date" id="tanggal" name="tanggal"><br>
+
+        <label for="jam">Jam:</label>
+        <input type="time" id="jam" name="jam"><br>
+
+        <p>Tingkat Kesulitan</p>
+
+        <label for="mudah">Mudah: %</label>
+        <input type="number" id="mudah" name="mudah" required>
+
+        <label for="sedang">Sedang: %</label>
+        <input type="number" id="sedang" name="sedang" required>
+
+        <label for="sulit">Sulit: %</label>
+        <input type="number" id="sulit" name="sulit"  required>
+
+
+          <button type="submit" value="Buat Ujian">Submit</button>
+    </form>
+
+</body>
+</html>

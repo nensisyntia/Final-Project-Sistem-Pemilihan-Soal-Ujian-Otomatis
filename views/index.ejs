@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Ujian</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="content">
+        <h1 style="margin-top: -1px; margin-bottom: 6%; text-align: center;" class="judul">Manajemen Soal Ujian</h1>
+        <div id="table-container">
+            <table>
+                <thead>
+                    <th style="padding: 15px;
+                    text-align: center;">No</th>
+                    <th>Ujian</th>
+                    <th>Jumlah Soal Ujian</th>
+                    <th>Durasi Ujian</th>
+                    <th>Tanggal Ujian</th>
+                    <th>Jam Ujian</th>
+                    <th>Opsi</th>
+                </thead>
+                <tbody style="padding: 15px;
+                text-align: center;">
+                    <% let counter = 1; %>
+                    <% data.forEach(item => { %>
+                        <tr onclick="redirectPage('<%= item.id %>');">
+                        <td style="padding: 15px;
+                        text-align: center;"><%= counter++; %></td>
+                        <td><%= item.nama_ujian %></td>
+                        <td><%= item.jumlah_soal %></td>
+                        <td><%= item.durasi %></td>
+                        <td><%= item.tanggal %></td>
+                        <td><%= item.jam %></td>
+                        <td><button onclick="deleteData('<%= item.id %>')" style=" padding: 8px;
+                            background-color: #006e9a;
+                            border: none;
+                            border-radius: 5px; color: #fff;">Hapus</button></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div id="create-upload-btn">
+        <a href="/banksoal" type="button">Data Soal</a>
+    </div>
+    <div id="create-exam-btn">
+        <a href="/buatUjian" type="button">Buat Ujian Baru</a>
+    </div>
+    <!-- <button id="create-exam-btn">Buat Ujian Baru</button> -->
+
+
+    <script>
+        function redirectPage(itemId) {
+            // Gantilah 'halaman_tujuan.html' dengan nama halaman yang ingin Anda tuju
+            window.location.href = 'lihatUjian/' + itemId;
+        }
+        
+    </script>
+
+</body>
+</html>

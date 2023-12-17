@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+#navbar {
+    height: 100vh;
+    width: 200px;
+    background-color: #006e9a;
+    color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+
+#listMenu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+}
+
+#navbar a {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+#navbar a.active {
+    font-weight: bold;
+}
+
+#content {
+    padding: 20px;
+}
+
+.judul {
+    margin: 10px 0 0 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 70px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #000000;
+}
+
+/* th, td {
+    padding: 15px;
+    text-align: center;
+} */
+
+
+td:button {
+    background-color: #006e9a;;
+}
+
+th {
+    background-color: #006e9a;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#create-exam-btn {
+    /* float: right; */
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    /* margin-top: 10px; */
+    padding: 10px;
+    background-color: #006e9a;
+    border: none;
+    border-radius: 5px;
+}
+
+#create-exam-btn:hover {
+    background-color: #006187;
+}
+
+#create-exam-btn a {
+    color: #fff;
+    font-size: smaller;
+    text-decoration:none;
+}
+
+#create-upload-btn {
+    float: left;
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    /* margin-top: 10px; */
+    padding: 10px;
+    background-color: #006e9a;
+    border: none;
+    border-radius: 5px;
+    
+}
+
+#create-upload-btn:hover {
+    background-color: #006187;
+    
+}
+#create-upload-btn a {
+    color: #fff;
+    font-size: smaller;
+    text-decoration:none;
+}
+
+/* #create-exam-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px;
+    background-color: #27AE60;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+} */
